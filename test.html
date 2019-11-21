@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painter</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/545cb5ea2d.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <body>
+            <div id="sidebar">
+
+                <div class="colorButtons">
+                    <h3>Color</h3>
+                    <input type="color" id="colorpicker" value="#c81464" class="colorpicker"> </div>
+
+
+                <div class="toolsButtons">
+                    <h3>Tools</h3>
+                    <button id="eraser" class="btn btn-default"><span class="glyphicon glyphicon-erase" aria-hidden="true"></span></button>
+                    <button id="clear" class="btn btn-danger"> <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></button>
+                </div>
+
+                <div class="buttonSize">
+                    <h3><i class="fas fa-paint-brush"></i> Size (<span id="showSize">5</span>)</h3>
+                    <input type="range" min="1" max="50" value="5" step="1" id="controlSize">
+                </div>
+
+                <div class="canvasSize">
+                    <h3>Canvas</h3>
+                    <div class="input-group">
+                        <span class="input-group-addon">Width</span>
+                        <input type="number" id="sizeX" class="form-control" placeholder="sizeX" value="800" class="size">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Height</span>
+                        <input type="number" id="sizeY" class="form-control" placeholder="sizeY" value="800" class="size">
+                    </div>
+                    <input type="button" class="updateSize btn btn-success" value="Update" id="canvasUpdate">
+                </div>
+                <div class="Storage">
+                    <h3>Storage</h3>
+                    <input type="button" value="Save" class="btn btn-warning" id="save">
+                    <input type="button" value="Load" class="btn btn-warning" id="load">
+                    <input type="button" value="Clear" class="btn btn-warning" id="clearCache">
+                </div>
+                <div class="extra">
+                    <h3>Extra</h3>
+                    <a id="saveToImage" class="btn btn-warning">Download</a>
+                </div>
+
+            </div>
+            <div id="canvas-here"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+</html>
