@@ -1,4 +1,3 @@
-	// SETTING ALL VARIABLES
 
 	var isMouseDown = false;
 	var canvas = document.createElement('canvas');
@@ -9,11 +8,7 @@
 	var currentColor = "#ffe6ff";
 	var canvasBg = "white";
 
-	// INITIAL LAUNCH
-
 	createCanvas();
-
-	// BUTTON EVENT HANDLERS
 
 	document.getElementById('canvasUpdate').addEventListener('click', function() {
 	    createCanvas();
@@ -31,9 +26,6 @@
 	document.getElementById('eraser').addEventListener('click', eraser);
 	document.getElementById('clear').addEventListener('click', createCanvas);
 
-
-	// REDRAW 
-
 	function redraw() {
 	    for (var i = 1; i < linesArray.length; i++) {
 	        ctx.beginPath();
@@ -46,13 +38,9 @@
 	    }
 	}
 
-	// DRAWING EVENT HANDLERS
-
 	canvas.addEventListener('mousedown', function() { mousedown(canvas, event); });
 	canvas.addEventListener('mousemove', function() { mousemove(canvas, event); });
 	canvas.addEventListener('mouseup', mouseup);
-
-	// CREATE CANVAS
 
 	function createCanvas() {
 	    canvas.id = "canvas";
@@ -67,14 +55,10 @@
 	    body.appendChild(canvas);
 	}
 
-	// ERASER HANDLING
-
 	function eraser() {
 	    currentSize = 20;
 	    currentColor = ctx.fillStyle
 	}
-
-	// GET MOUSE POSITION
 
 	function getMousePos(canvas, evt) {
 	    var rect = canvas.getBoundingClientRect();
@@ -83,8 +67,6 @@
 	        y: evt.clientY - rect.top
 	    };
 	}
-
-	// ON MOUSE DOWN
 
 	function mousedown(canvas, evt) {
 	    var mousePos = getMousePos(canvas, evt);
@@ -98,8 +80,6 @@
 
 	}
 
-	// ON MOUSE MOVE
-
 	function mousemove(canvas, evt) {
 
 	    if (isMouseDown) {
@@ -109,8 +89,6 @@
 	        store(currentPosition.x, currentPosition.y, currentSize, currentColor);
 	    }
 	}
-
-	// ON MOUSE UP
 
 	function mouseup() {
 	    isMouseDown = false
